@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.521" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-02-20T03:56:03" tests="0" file="cypress/integration/firstTest.spec.ts" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test with backend" timestamp="2023-02-20T03:56:03" tests="1" time="4.492" failures="1">
+    <testcase name="Test with backend post a new article" time="1.014" classname="post a new article">
+      <failure message="`cy.request()` failed on:
+
+https://api.realworld.io/api/articles/
+
+The response we received from your web server was:
+
+  &gt; 422: Unprocessable Entity
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://api.realworld.io/api/articles/
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;Authorization&quot;: &quot;Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN5dGVzdDJAdGVzdC5jb20iLCJ1c2VybmFtZSI6IkN5VGVzdDIiLCJpYXQiOjE2NzY4NjUzNjcsImV4cCI6MTY4MjA0OTM2N30.65Gf3tf_1oDK4L_1jNRZ0bDkNGYsU7PNHr3tbTxcfhE&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.5.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;,
+  &quot;content-type&quot;: &quot;application/json&quot;,
+  &quot;content-length&quot;: 113
+}
+Body: {&quot;article&quot;:{&quot;tagList&quot;:[],&quot;title&quot;:&quot;Request from Apia&quot;,&quot;description&quot;:&quot;API testing is good&quot;,&quot;body&quot;:&quot;React is cool&quot;}}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 422 - Unprocessable Entity
+Headers: {
+  &quot;date&quot;: &quot;Mon, 20 Feb 2023 03:56:08 GMT&quot;,
+  &quot;content-type&quot;: &quot;application/json; charset=utf-8&quot;,
+  &quot;content-length&quot;: &quot;39&quot;,
+  &quot;connection&quot;: &quot;keep-alive&quot;,
+  &quot;x-powered-by&quot;: &quot;Express&quot;,
+  &quot;access-control-allow-origin&quot;: &quot;*&quot;,
+  &quot;etag&quot;: &quot;W/\&quot;27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\&quot;&quot;,
+  &quot;via&quot;: &quot;1.1 vegur&quot;,
+  &quot;cf-cache-status&quot;: &quot;DYNAMIC&quot;,
+  &quot;report-to&quot;: &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JyqMRmQ6v5OOr9UNlOKw6gkQQjtWeHJ2Th6%2BSFLa0vQOu2EU6ZK968eOiFPq33EWqFeizTdjVxZe%2FsQsjMp4pRG9J1XrD5V1%2Bpbo9XZqwbLK7mzx852pyIwykqVWQuXpOkRz\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;,
+  &quot;nel&quot;: &quot;{\&quot;success_fraction\&quot;:0,\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;,
+  &quot;server&quot;: &quot;cloudflare&quot;,
+  &quot;cf-ray&quot;: &quot;79c44f8618855171-IST&quot;,
+  &quot;alt-svc&quot;: &quot;h3=\&quot;:443\&quot;; ma=86400, h3-29=\&quot;:443\&quot;; ma=86400&quot;
+}
+Body: {
+  &quot;errors&quot;: {
+    &quot;title&quot;: [
+      &quot;must be unique&quot;
+    ]
+  }
+}
+
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed on:
+
+https://api.realworld.io/api/articles/
+
+The response we received from your web server was:
+
+  > 422: Unprocessable Entity
+
+This was considered a failure because the status code was not `2xx` or `3xx`.
+
+If you do not want status codes to cause failures pass the option: `failOnStatusCode: false`
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://api.realworld.io/api/articles/
+Headers: {
+  "Connection": "keep-alive",
+  "Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN5dGVzdDJAdGVzdC5jb20iLCJ1c2VybmFtZSI6IkN5VGVzdDIiLCJpYXQiOjE2NzY4NjUzNjcsImV4cCI6MTY4MjA0OTM2N30.65Gf3tf_1oDK4L_1jNRZ0bDkNGYsU7PNHr3tbTxcfhE",
+  "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.5.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "content-type": "application/json",
+  "content-length": 113
+}
+Body: {"article":{"tagList":[],"title":"Request from Apia","description":"API testing is good","body":"React is cool"}}
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 422 - Unprocessable Entity
+Headers: {
+  "date": "Mon, 20 Feb 2023 03:56:08 GMT",
+  "content-type": "application/json; charset=utf-8",
+  "content-length": "39",
+  "connection": "keep-alive",
+  "x-powered-by": "Express",
+  "access-control-allow-origin": "*",
+  "etag": "W/\"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\"",
+  "via": "1.1 vegur",
+  "cf-cache-status": "DYNAMIC",
+  "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=JyqMRmQ6v5OOr9UNlOKw6gkQQjtWeHJ2Th6%2BSFLa0vQOu2EU6ZK968eOiFPq33EWqFeizTdjVxZe%2FsQsjMp4pRG9J1XrD5V1%2Bpbo9XZqwbLK7mzx852pyIwykqVWQuXpOkRz\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+  "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+  "server": "cloudflare",
+  "cf-ray": "79c44f8618855171-IST",
+  "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+}
+Body: {
+  "errors": {
+    "title": [
+      "must be unique"
+    ]
+  }
+}
+
+
+https://on.cypress.io/request
+    at <unknown> (http://localhost:4200/__cypress/runner/cypress_runner.js:139721:80)
+    at tryCatcher (http://localhost:4200/__cypress/runner/cypress_runner.js:8914:23)
+    at Promise._settlePromiseFromHandler (http://localhost:4200/__cypress/runner/cypress_runner.js:6849:31)
+    at Promise._settlePromise (http://localhost:4200/__cypress/runner/cypress_runner.js:6906:18)
+    at Promise._settlePromise0 (http://localhost:4200/__cypress/runner/cypress_runner.js:6951:10)
+    at Promise._settlePromises (http://localhost:4200/__cypress/runner/cypress_runner.js:7031:18)
+    at _drainQueueStep (http://localhost:4200/__cypress/runner/cypress_runner.js:3621:12)
+    at _drainQueue (http://localhost:4200/__cypress/runner/cypress_runner.js:3614:9)
+    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3630:5)
+    at Async.drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3500:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/integration/firstTest.spec.ts:115:9)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

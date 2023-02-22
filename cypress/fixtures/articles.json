@@ -1,0 +1,39 @@
+{
+  "articles": [
+    {
+      "slug": "The-new-ityyt-1850",
+      "title": "title1",
+      "description": "This is the description",
+      "body": "This is the body",
+      "tagList": [],
+      "createdAt": "2023-02-14T14:44:59.252Z",
+      "updatedAt": "2023-02-14T14:44:59.252Z",
+      "favorited": true,
+      "favoritesCount": 1,
+      "author": {
+        "username": "CY Test3r",
+        "bio": "2222",
+        "image": "1111",
+        "following": false
+      }
+    },
+    {
+      "slug": "The-new-ityt-1850",
+      "title": "title2",
+      "description": "This is the description",
+      "body": "This is the body",
+      "tagList": [],
+      "createdAt": "2023-02-14T13:23:54.142Z",
+      "updatedAt": "2023-02-14T13:23:54.142Z",
+      "favorited": false,
+      "favoritesCount": 5,
+      "author": {
+        "username": "CY Test3r",
+        "bio": "2222",
+        "image": "1111",
+        "following": false
+      }
+    }
+  ],
+  "articlesCount": 2
+}

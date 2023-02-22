@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-02-20T03:56:03.968Z",
+    "end": "2023-02-20T03:56:08.489Z",
+    "duration": 4521,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0663b076-c783-4bd9-965f-51c72eca41db",
+      "title": "",
+      "fullFile": "cypress/integration/firstTest.spec.ts",
+      "file": "cypress/integration/firstTest.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16739155-de7d-43ae-9703-ad70927890ca",
+          "title": "Test with backend",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "post a new article",
+              "fullTitle": "Test with backend post a new article",
+              "timedOut": null,
+              "duration": 1092,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const bodyRequest = {\n    \"article\": {\n        \"tagList\": [],\n        \"title\": \"Request from Apia\",\n        \"description\": \"API testing is good\",\n        \"body\": \"React is cool\"\n    }\n};\ncy.get(\"@token\").then(token => {\n    cy.request({\n        url: Cypress.env(\"apiUrl\") + \"/api/articles/\",\n        headers: { \"Authorization\": \"Token \" + token },\n        method: \"POST\",\n        body: bodyRequest\n    }).then(response => {\n        expect(response.status).to.equal(200);\n    });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/articles/\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/articles/\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN5dGVzdDJAdGVzdC5jb20iLCJ1c2VybmFtZSI6IkN5VGVzdDIiLCJpYXQiOjE2NzY4NjUzNjcsImV4cCI6MTY4MjA0OTM2N30.65Gf3tf_1oDK4L_1jNRZ0bDkNGYsU7PNHr3tbTxcfhE\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.5.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 113\n}\nBody: {\"article\":{\"tagList\":[],\"title\":\"Request from Apia\",\"description\":\"API testing is good\",\"body\":\"React is cool\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Mon, 20 Feb 2023 03:56:08 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"39\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=JyqMRmQ6v5OOr9UNlOKw6gkQQjtWeHJ2Th6%2BSFLa0vQOu2EU6ZK968eOiFPq33EWqFeizTdjVxZe%2FsQsjMp4pRG9J1XrD5V1%2Bpbo9XZqwbLK7mzx852pyIwykqVWQuXpOkRz\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"79c44f8618855171-IST\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"title\": [\n      \"must be unique\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed on:\n\nhttps://api.realworld.io/api/articles/\n\nThe response we received from your web server was:\n\n  > 422: Unprocessable Entity\n\nThis was considered a failure because the status code was not `2xx` or `3xx`.\n\nIf you do not want status codes to cause failures pass the option: `failOnStatusCode: false`\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://api.realworld.io/api/articles/\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"Authorization\": \"Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImN5dGVzdDJAdGVzdC5jb20iLCJ1c2VybmFtZSI6IkN5VGVzdDIiLCJpYXQiOjE2NzY4NjUzNjcsImV4cCI6MTY4MjA0OTM2N30.65Gf3tf_1oDK4L_1jNRZ0bDkNGYsU7PNHr3tbTxcfhE\",\n  \"user-agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/12.5.1 Chrome/106.0.5249.51 Electron/21.0.0 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-type\": \"application/json\",\n  \"content-length\": 113\n}\nBody: {\"article\":{\"tagList\":[],\"title\":\"Request from Apia\",\"description\":\"API testing is good\",\"body\":\"React is cool\"}}\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 422 - Unprocessable Entity\nHeaders: {\n  \"date\": \"Mon, 20 Feb 2023 03:56:08 GMT\",\n  \"content-type\": \"application/json; charset=utf-8\",\n  \"content-length\": \"39\",\n  \"connection\": \"keep-alive\",\n  \"x-powered-by\": \"Express\",\n  \"access-control-allow-origin\": \"*\",\n  \"etag\": \"W/\\\"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is\\\"\",\n  \"via\": \"1.1 vegur\",\n  \"cf-cache-status\": \"DYNAMIC\",\n  \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=JyqMRmQ6v5OOr9UNlOKw6gkQQjtWeHJ2Th6%2BSFLa0vQOu2EU6ZK968eOiFPq33EWqFeizTdjVxZe%2FsQsjMp4pRG9J1XrD5V1%2Bpbo9XZqwbLK7mzx852pyIwykqVWQuXpOkRz\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n  \"server\": \"cloudflare\",\n  \"cf-ray\": \"79c44f8618855171-IST\",\n  \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n}\nBody: {\n  \"errors\": {\n    \"title\": [\n      \"must be unique\"\n    ]\n  }\n}\n\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:4200/__cypress/runner/cypress_runner.js:139721:80)\n    at tryCatcher (http://localhost:4200/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (http://localhost:4200/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (http://localhost:4200/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromise0 (http://localhost:4200/__cypress/runner/cypress_runner.js:6951:10)\n    at Promise._settlePromises (http://localhost:4200/__cypress/runner/cypress_runner.js:7031:18)\n    at _drainQueueStep (http://localhost:4200/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (http://localhost:4200/__cypress/runner/cypress_runner.js:3614:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3630:5)\n    at Async.drainQueues (http://localhost:4200/__cypress/runner/cypress_runner.js:3500:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/integration/firstTest.spec.ts:115:9)",
+                "diff": null
+              },
+              "uuid": "f4afb57d-1829-438c-84bf-de937bc75dac",
+              "parentUUID": "16739155-de7d-43ae-9703-ad70927890ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f4afb57d-1829-438c-84bf-de937bc75dac"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1092,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
